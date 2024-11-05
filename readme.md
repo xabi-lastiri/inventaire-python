@@ -2,6 +2,8 @@
 
 Premier projet Python dans le cadre de mon apprentissage de ce langage.
 
+![Illustration - Dall-E.webp](Illustration%20-%20Dall-E.webp)
+
 ---
 
 ### Fonctionnalités
