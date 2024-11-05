@@ -1,5 +1,6 @@
 from librairie.fonctions import f0_valeur_saisie_vide, f1_reference_existe, f2_verifier_valeur_entiere_positive, f3_afficher_liste_references
 
+
 def p2_vendre(inv):
     while True:
         reference = input(f"Saisissez la référence à vendre ({f3_afficher_liste_references(inv)})\n (pour annuler, laissez vide) \n")
@@ -11,7 +12,7 @@ def p2_vendre(inv):
             print("La référence n'existe pas.")
     while True:
         try:
-            quantite_a_vendre = input(f"Il reste {inv[reference]} unité(s) en stock. Saisissez la quantité à vendre (pour annuler, laissez vide) \n  ")
+            quantite_a_vendre = input(f"Il reste {inv[reference]} unité(s) en stock. Saisissez la quantité à vendre : \n  ")
             quantite_a_vendre = int(quantite_a_vendre)
             if f2_verifier_valeur_entiere_positive(quantite_a_vendre) and quantite_a_vendre <= inv[reference]:
                 break
@@ -19,7 +20,7 @@ def p2_vendre(inv):
         except ValueError:
             print("Valeur incorrecte.")
     while True:
-        n = input(f"Confirmez-vous ? (o/n) \n")
+        n = input(f"Confirmez-vous l'opération ? (o/n) \n")
         if n == "o":
             break
         if n == "n":

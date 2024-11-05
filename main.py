@@ -6,11 +6,13 @@ from librairie.programmes.p4_afficher_stock import p4_afficher_stock
 from librairie.programmes.p5_exporter_fiche_stock import p5_exporter_fiche_stock
 from librairie.programmes.p6_supprimer_reference import p6_supprimer_reference
 
+
 inv = {
     "pomme": 50,
     "banane": 100,
     "orange": 50
 }
+
 
 while True:
     menu = input(f"Sélectionner le programme : \n 0. Quitter \n 1. Ajouter une référence \n 2. Vendre \n 3. Ajouter du stock \n 4. Afficher le stock \n 5. Exporter la fiche de stock \n 6. Supprimer une référence \n ")
