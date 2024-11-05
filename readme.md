@@ -17,9 +17,9 @@ Ce petit programme permet de gérer un inventaire de produits. Il est possible d
 
 ### Structure
 
-Les programmes sont accessibles depuis le menu principal (contenu dans le fichier `main.py`).
-Chaque programme est stocké dans `librairies/programmes` et fait appel à des fonctions
-stockées dans le fichier `fonctions.py` situé dans le répertoire `librairies/`.
+Les programmes sont accessibles depuis le menu principal (contenu dans le fichier [main.py](main.py)).
+Chaque programme est stocké dans [`librairie/programmes`](librairie/programmes) et fait appel à des fonctions
+stockées dans le fichier [fonctions.py](librairie/fonctions.py) situé dans le répertoire [`librairie/`](librairie).
 
 ---
 
