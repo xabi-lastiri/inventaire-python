@@ -1,10 +1,10 @@
-from librairie.programmes.p0_quitter import p0_quitter
-from librairie.programmes.p1_ajouter_reference import p1_ajouter_reference
-from librairie.programmes.p2_vendre import p2_vendre
-from librairie.programmes.p3_ajouter_stock import p3_ajouter_stock
-from librairie.programmes.p4_afficher_stock import p4_afficher_stock
-from librairie.programmes.p5_exporter_fiche_stock import p5_exporter_fiche_stock
-from librairie.programmes.p6_supprimer_reference import p6_supprimer_reference
+from src.programmes.p0_quitter import p0_quitter
+from src.programmes.p1_ajouter_reference import p1_ajouter_reference
+from src.programmes.p2_vendre import p2_vendre
+from src.programmes.p3_ajouter_stock import p3_ajouter_stock
+from src.programmes.p4_afficher_stock import p4_afficher_stock
+from src.programmes.p5_exporter_fiche_stock import p5_exporter_fiche_stock
+from src.programmes.p6_supprimer_reference import p6_supprimer_reference
 
 
 inv = {

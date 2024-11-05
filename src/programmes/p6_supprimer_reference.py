@@ -1,4 +1,4 @@
-from librairie.fonctions import f0_valeur_saisie_vide, f1_reference_existe
+from src.programmes.fonctions import f0_valeur_saisie_vide, f1_reference_existe
 
 
 def p6_supprimer_reference(inv):

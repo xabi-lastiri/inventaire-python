@@ -2,7 +2,7 @@
 
 Premier projet Python dans le cadre de mon apprentissage de ce langage.
 
-![Illustration.png](Illustration.png)
+![Illustration.png](documentation/Illustration.png)
 
 ---
 
@@ -20,12 +20,12 @@ Ce petit programme permet de gérer un inventaire de produits. Il est possible d
 ### Structure
 
 Les programmes sont accessibles depuis le menu principal (contenu dans le fichier [main.py](main.py)).
-Chaque programme est stocké dans [`librairie/programmes`](librairie/programmes) et fait appel à des fonctions
-stockées dans le fichier [fonctions.py](librairie/fonctions.py) situé dans le répertoire [`librairie/`](librairie).
+Chaque programme est stocké dans [`src/programmes`](src/programmes) et fait appel à des fonctions
+stockées dans le fichier [fonctions.py](src/programmes/fonctions.py) situé dans le même répertoire [`src/programmes`](src).
 
 ---
 
 ### Logique
 
-Consulter le diagramme : [Algorithme.drawio](Algorithme.drawio).
+Consulter le diagramme : [Algorithme.drawio](documentation/Algorithme.drawio).
 
