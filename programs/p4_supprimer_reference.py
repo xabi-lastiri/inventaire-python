@@ -1,7 +1,7 @@
-from src.programmes.fonctions import f0_valeur_saisie_vide, f1_reference_existe
+from library.fonctions import f0_valeur_saisie_vide, f1_reference_existe
 
 
-def p6_supprimer_reference(inv):
+def p4_supprimer_reference(inv):
     while True:
         reference = input("Saisissez la référence à supprimer de l'inventaire (pour annuler, laissez vide) \n")
         if f0_valeur_saisie_vide(reference):

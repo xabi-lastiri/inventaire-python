@@ -1,7 +1,7 @@
-from src.programmes.fonctions import f0_valeur_saisie_vide, f1_reference_existe, f2_verifier_valeur_entiere_positive
+from library.fonctions import f0_valeur_saisie_vide, f1_reference_existe, f2_verifier_valeur_entiere_positive
 
 
-def p1_ajouter_reference(inv):
+def p3_ajouter_reference(inv):
     while True:
         reference = input("Saisissez la référence à ajouter dans l'inventaire (pour annuler, laissez vide) \n")
         if f0_valeur_saisie_vide(reference):
