@@ -1,31 +1,31 @@
-## Inventaire Python
+# Inventaire Python
 
-Premier projet Python dans le cadre de mon apprentissage de ce langage.
+Premier projet de programmation dans le cadre de mon apprentissage du langage Python.
 
 ![Illustration.png](documentation/Illustration.png)
 
 ---
 
-### Fonctionnalités
+## Fonctionnalités
 Ce petit programme permet de gérer un inventaire de produits. Il est possible de :
-- consulter le stock disponible de chaque produit ;
-- exporter la fiche de stock ;
-- ajouter une référence produit dans l'inventaire ;
-- supprimer une référence produit de l'inventaire ;
-- vendre une référence ;
-- ajouter du stock pour une référence.
+1. vendre une référence ; 
+2. ajouter du stock pour une référence. 
+3. ajouter une référence produit dans l'inventaire ; 
+4. supprimer une référence produit de l'inventaire ; 
+5. consulter le stock disponible de chaque produit ; 
+6. exporter la fiche de stock.
 
 ---
 
-### Structure
+## Structure
 
 Les programmes sont accessibles depuis le menu principal (contenu dans le fichier [main.py](main.py)).
-Chaque programme est stocké dans [`src/programmes`](programs) et fait appel à des fonctions
-stockées dans le fichier [fonctions.py](library/fonctions.py) situé dans le même répertoire [`src/programmes`](src).
+Chaque programme est stocké dans [`/programs`](programs) et fait appel à des fonctions
+stockées dans le fichier [fonctions.py](library/fonctions.py) situé dans le répertoire [`/library`](library).
 
 ---
 
-### Logique
+## Logique
 
 Consulter le diagramme : [Algorithme.drawio](documentation/Algorithme.drawio).
 
