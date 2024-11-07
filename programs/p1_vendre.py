@@ -13,7 +13,7 @@ def p1_vendre(inv):
                 print(f"\n{reference} n'existe pas dans l'inventaire.")
         while True:
             try:
-                quantite_a_vendre = input(f"\nIl reste {inv[reference]} unité(s) en stock pour le produit {reference}. Saisissez la quantité à vendre : \n\n")
+                quantite_a_vendre = input(f"\nIl reste {inv[reference]} unité(s) en stock pour le produit {reference}.\nSaisissez la quantité à vendre : \n\n")
                 quantite_a_vendre = int(quantite_a_vendre)
                 if f2_verifier_valeur_entiere_positive(quantite_a_vendre) and quantite_a_vendre <= inv[reference]:
                     break

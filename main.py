@@ -13,7 +13,7 @@ inv = {
 }
 
 while True:
-    menu = input(f"\nSélectionner le programme : \n 0. Quitter \n 1. Vendre \n 2. Ajouter du stock \n 3. Ajouter une référence \n 4. Supprimer une référence \n 5. Afficher le stock \n 6. Exporter la fiche de stock  \n\n ")
+    menu = input(f"\nSélectionner le programme :\n\n 0. Quitter \n 1. Vendre \n 2. Ajouter du stock \n 3. Ajouter une référence \n 4. Supprimer une référence \n 5. Afficher le stock \n 6. Exporter la fiche de stock  \n\n ")
     if menu == "0":
         p0_quitter()
     if menu == "1":
