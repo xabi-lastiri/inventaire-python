@@ -8,7 +8,7 @@ Premier projet de programmation dans le cadre de mon apprentissage du langage Py
 
 Ce petit programme permet de gérer un inventaire de produits. Il est possible de :
 1. vendre une référence ; 
-2. ajouter du stock pour une référence. 
+2. ajouter du stock pour une référence ; 
 3. ajouter une référence produit dans l'inventaire ; 
 4. supprimer une référence produit de l'inventaire ; 
 5. consulter le stock disponible de chaque produit ; 
