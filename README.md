@@ -2,7 +2,7 @@
 
 Premier projet de programmation dans le cadre de mon apprentissage du langage Python.
 
-![Illustration.png](documentation/menu_accueil.png)
+![Illustration.png](documentation/capture_menu_accueil.png)
 
 ## Fonctionnalités
 
