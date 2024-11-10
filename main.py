@@ -1,10 +1,10 @@
-from programs.p0_quitter import p0_quitter
-from programs.p3_ajouter_reference import p3_ajouter_reference
-from programs.p1_vendre import p1_vendre
-from programs.p2_ajouter_stock import p2_ajouter_stock
-from programs.p5_afficher_stock import p5_afficher_stock
-from programs.p6_exporter_fiche_stock import p6_exporter_fiche_stock
-from programs.p4_supprimer_reference import p4_supprimer_reference
+from modules.p0_quitter import p0_quitter
+from modules.p3_ajouter_reference import p3_ajouter_reference
+from modules.p1_vendre import p1_vendre
+from modules.p2_ajouter_stock import p2_ajouter_stock
+from modules.p5_afficher_stock import p5_afficher_stock
+from modules.p6_exporter_fiche_stock import p6_exporter_fiche_stock
+from modules.p4_supprimer_reference import p4_supprimer_reference
 
 
 while True:
