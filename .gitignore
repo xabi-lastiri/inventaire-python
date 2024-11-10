@@ -1,3 +1,4 @@
 .DS_Store
 .idea
-.idea/*
+./documentation/schéma_algorithme.drawio
+./documentation/.$schéma_algorithme.drawio.bkp

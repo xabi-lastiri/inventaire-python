@@ -23,8 +23,3 @@ Chaque module est stocké dans [`/modules`](modules) et fait appel à des foncti
 stockées dans le fichier [fonctions.py](library/fonctions.py) situé dans le répertoire [`/library`](library). 
 Les données de l'inventaire sont contenues dans [inventaire.py](data/inventaire.py) 
 situé dans le répertoire [`/data`](data).
-
-## Logique
-
-Consulter le diagramme : [Algorithme.drawio](documentation/schéma_algorithme.drawio).
-
