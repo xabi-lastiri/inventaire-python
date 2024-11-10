@@ -1,6 +1,5 @@
 from library.fonctions import f0_valeur_saisie_vide, f1_reference_existe, f2_verifier_valeur_entiere_positive
 
-
 def m3_ajouter_reference(inv):
     while True:
         # pour arrêter le programme que lorsque l'utilisateur le décide

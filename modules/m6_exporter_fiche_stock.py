@@ -1,6 +1,5 @@
 from library import csv
 
-
 def m6_exporter_fiche_stock(inv):
     with open('fiche_stock.csv','w') as f:
         writer = csv.writer(f)
