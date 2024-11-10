@@ -4,8 +4,6 @@ Premier projet de programmation dans le cadre de mon apprentissage du langage Py
 
 ![Illustration.png](documentation/Illustration.png)
 
----
-
 ## Fonctionnalités
 Ce petit programme permet de gérer un inventaire de produits. Il est possible de :
 1. vendre une référence ; 
@@ -15,15 +13,11 @@ Ce petit programme permet de gérer un inventaire de produits. Il est possible d
 5. consulter le stock disponible de chaque produit ; 
 6. exporter la fiche de stock.
 
----
-
 ## Structure
 
 Les programmes sont accessibles depuis le menu principal (contenu dans le fichier [main.py](main.py)).
 Chaque programme est stocké dans [`/programs`](programs) et fait appel à des fonctions
 stockées dans le fichier [fonctions.py](library/fonctions.py) situé dans le répertoire [`/library`](library).
-
----
 
 ## Logique
 
