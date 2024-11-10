@@ -2,7 +2,7 @@ from modules import *
 from data import *
 
 # demander à l'utilisateur de s'autentifier pour permettre le traçage des opérations
-utilisateur = input("Quel est votre nom : ")
+utilisateur = input("Saisissez votre nom : ")
 while True:
     menu = input(f"\nSélectionner le programme :\n\n 0. Quitter \n 1. Vendre \n 2. Ajouter du stock \n 3. Ajouter une référence \n 4. Supprimer une référence \n 5. Afficher le stock \n 6. Afficher le registre des opérations \n 7. Exporter la fiche de stock \n 8. Exporter le registre des opérations  \n\n")
     if menu == "0":
