@@ -17,8 +17,7 @@ def m1_vendre(inventaire, registre, utilisateur):
             # demander à l'utilisateur de saisir la quantité à vendre
             # vérifier que la quantité à vendre soit (1) cohérente et (2) possible compte tenu du stock diponible dans l'inventaire au moment de l'opération
             try:
-                quantite_a_vendre = input(f"\nIl reste {inventaire[reference]} unité(s) en stock pour le produit {reference}.\nSaisissez la quantité à vendre : \n\n")
-                quantite_a_vendre = int(quantite_a_vendre)
+                quantite_a_vendre = int(input(f"\nIl reste {inventaire[reference]} unité(s) en stock pour le produit {reference}.\nSaisissez la quantité à vendre : \n\n"))
                 if f2_verifier_valeur_entiere_positive(quantite_a_vendre) and quantite_a_vendre <= inventaire[reference]:
                     break
                 print("\nLe stock est insuffisant.")

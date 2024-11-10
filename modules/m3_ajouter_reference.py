@@ -17,10 +17,8 @@ def m3_ajouter_reference(inventaire, registre, utilisateur):
             # demander à l'utilisateur de saisir le stock initial pour la référence à entrer dans l'inventaire
             # vérifier que la quantité saisie est cohérente
             try:
-                stock_initial = input(f"\nSaisissez le stock initial : \n\n")
-                stock_initial = int(stock_initial)
-                f0_valeur_saisie_vide(stock_initial)
-                if f2_verifier_valeur_entiere_positive(stock_initial):
+                stock_initial = int(input(f"\nSaisissez le stock initial : \n\n"))
+                if type(stock_initial) == int and stock_initial >= 0:
                     break
             except ValueError:
                 print("\nValeur incorrecte.")
