@@ -1,4 +1,4 @@
-from library.fonctions import f0_valeur_saisie_vide, f1_reference_existe, f3_afficher_liste_references
+from library import *
 
 def m4_supprimer_reference(inventaire, registre, utilisateur):
     while True:

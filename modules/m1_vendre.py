@@ -1,4 +1,4 @@
-from library.fonctions import f0_valeur_saisie_vide, f1_reference_existe, f2_verifier_valeur_entiere_positive, f3_afficher_liste_references
+from library import *
 
 def m1_vendre(inventaire, registre, utilisateur):
     while True:
