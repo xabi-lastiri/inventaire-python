@@ -16,7 +16,7 @@ def p1_vendre(inv):
                 print(f"\n{reference} n'existe pas dans l'inventaire.")
         while True:
             # demander à l'utilisateur de saisir la quantité à vendre
-            # vérifier que la quantité à vendre soit (1) cohérente et (2) possible compte tenu du stock diponible au moment de l'opération
+            # vérifier que la quantité à vendre soit (1) cohérente et (2) possible compte tenu du stock diponible dans l'inventaire au moment de l'opération
             try:
                 quantite_a_vendre = input(f"\nIl reste {inv[reference]} unité(s) en stock pour le produit {reference}.\nSaisissez la quantité à vendre : \n\n")
                 quantite_a_vendre = int(quantite_a_vendre)
