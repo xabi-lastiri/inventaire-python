@@ -13,6 +13,21 @@ Ce petit programme permet de gérer un inventaire de produits. Il est possible d
 5. consulter le stock disponible de chaque produit ; 
 6. exporter la fiche de stock.
 
+<table>
+    <thead>
+        <tr>
+            <th>Numéro</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>P1</td>
+            <td>Vendre une référence</td>
+        </tr>
+    </tbody>
+</table>
+
 ## Structure
 
 Les programmes sont accessibles depuis le menu principal (contenu dans le fichier [main.py](main.py)).
