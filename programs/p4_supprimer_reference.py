@@ -18,18 +18,17 @@ def p4_supprimer_reference(inv):
             # demander à l'utilisateur de confirmer l'opération ; si oui, supprimer de l'inventaire la référence et son stock associé
             n = input(f"\nSupprimer {reference}.\nConfirmez-vous ? (o/n) \n\n").lower()
             if n == "o":
-                break
+                del inv[reference]
+                print(f"\nNous vous confirmons la suppression de la référence {reference}")
+                # proposer à l'utilisateur de réaliser une nouvelle opération ou de revenir au menu
+                continuer = input("\nVoulez-vous supprimer une autre référence ? (o/n)\n\n").lower()
+                if continuer == "n":
+                    return
+                if continuer == "o":
+                    break
+                else:
+                    return
             if n == "n":
-                return
+                break
             else:
                 print("\nVeuillez saisir à nouveau votre réponse.")
-        del inv[reference]
-        print(f"\nNous vous confirmons la suppression de la référence {reference}")
-        # proposer à l'utilisateur de réaliser une nouvelle opération ou de revenir au menu
-        continuer = input("\nVoulez-vous supprimer une autre référence ? (o/n)\n\n").lower()
-        if continuer == "n":
-            break
-        if continuer == "o":
-            continue
-        else:
-            break

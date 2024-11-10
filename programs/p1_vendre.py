@@ -29,18 +29,18 @@ def p1_vendre(inv):
             # demander à l'utilisateur de confirmer l'opération ; si oui, retirer de l'inventaire la quantité pour la référence donnée
             n = input(f"\nVente de {quantite_a_vendre} unité(s) de {reference}.\nConfirmez-vous l'opération ? (o/n)\n\n").lower()
             if n == "o":
-                break
+                inv[reference] -= quantite_a_vendre
+                print(
+                    f"\nVous venez de vendre {quantite_a_vendre} unité(s) de {reference}. Il reste maintenant {inv[reference]} unité(s) en stock")
+                # proposer à l'utilisateur de réaliser une nouvelle opération ou de revenir au menu
+                continuer = input("\nVoulez-vous vendre autre chose ? (o/n)\n\n").lower()
+                if continuer == "n":
+                    return
+                if continuer == "o":
+                    break
+                else:
+                    return
             if n == "n":
-                return
+                break
             else:
                 print("\nVeuillez saisir à nouveau votre réponse.")
-        inv[reference] -= quantite_a_vendre
-        print(f"\nVous venez de vendre {quantite_a_vendre} unité(s) de {reference}. Il reste maintenant {inv[reference]} unité(s) en stock")
-        # proposer à l'utilisateur de réaliser une nouvelle opération ou de revenir au menu
-        continuer = input("\nVoulez-vous vendre autre chose ? (o/n)\n\n").lower()
-        if continuer == "n":
-            break
-        if continuer == "o":
-            continue
-        else:
-            break
