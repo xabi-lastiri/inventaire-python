@@ -12,7 +12,9 @@ Ce petit programme permet de gérer un inventaire de produits. Il est possible d
 3. ajouter une référence produit dans l'inventaire ; 
 4. supprimer une référence produit de l'inventaire ; 
 5. consulter le stock disponible de chaque produit ; 
-6. exporter la fiche de stock.
+6. consulter le registre des opérations ;
+7. exporter la fiche de stock ;
+8. exporter le registre des opérations.
 
 ## Structure
 

@@ -1,14 +1,15 @@
 from modules.m0_quitter import m0_quitter
-from modules.m3_ajouter_reference import m3_ajouter_reference
 from modules.m1_vendre import m1_vendre
 from modules.m2_ajouter_stock import m2_ajouter_stock
+from modules.m3_ajouter_reference import m3_ajouter_reference
+from modules.m4_supprimer_reference import m4_supprimer_reference
 from modules.m5_afficher_stock import m5_afficher_stock
 from modules.m6_afficher_registre import m6_afficher_registre
 from modules.m7_exporter_fiche_stock import m7_exporter_fiche_stock
-from modules.m4_supprimer_reference import m4_supprimer_reference
 from modules.m8_exporter_registre import m8_exporter_registre
 
-
+# demander à l'utilisateur de s'autentifier pour permettre le traçage des opérations
+utilisateur = input("Quel est votre nom : ")
 while True:
     from data.inventaire import inventaire
     from data.registre import registre
@@ -16,13 +17,13 @@ while True:
     if menu == "0":
         m0_quitter()
     if menu == "1":
-        m1_vendre(inventaire, registre)
+        m1_vendre(inventaire, registre, utilisateur)
     if menu == "2":
-        m2_ajouter_stock(inventaire, registre)
+        m2_ajouter_stock(inventaire, registre, utilisateur)
     if menu == "3":
-        m3_ajouter_reference(inventaire, registre)
+        m3_ajouter_reference(inventaire, registre, utilisateur)
     if menu == "4":
-        m4_supprimer_reference(inventaire, registre)
+        m4_supprimer_reference(inventaire, registre, utilisateur)
     if menu == "5":
         m5_afficher_stock(inventaire)
     if menu == "6":

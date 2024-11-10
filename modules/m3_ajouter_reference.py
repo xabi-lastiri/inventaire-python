@@ -1,6 +1,6 @@
 from library.fonctions import f0_valeur_saisie_vide, f1_reference_existe, f2_verifier_valeur_entiere_positive
 
-def m3_ajouter_reference(inventaire, registre):
+def m3_ajouter_reference(inventaire, registre, utilisateur):
     while True:
         # pour arrêter le programme que lorsque l'utilisateur le décide
         while True:
@@ -30,7 +30,7 @@ def m3_ajouter_reference(inventaire, registre):
             if n == "o":
                 inventaire[reference] = stock_initial
                 # enregistrement de l'opération dans le registre
-                registre.append(f"Création : {reference} avec {stock_initial} unité(s) en stock initial")
+                registre.append(f"{utilisateur} - Création : {reference} avec {stock_initial} unité(s) en stock initial")
                 print(f"\nVous venez d'ajouter {reference} avec {stock_initial} unité(s) en stock initial.\n")
                 # proposer à l'utilisateur de réaliser une nouvelle opération ou de revenir au menu
                 continuer = input("\nVoulez-vous ajouter une autre référence ? (o/n)\n\n").lower()

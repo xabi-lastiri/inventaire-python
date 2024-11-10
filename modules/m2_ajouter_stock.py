@@ -1,6 +1,6 @@
 from library.fonctions import f0_valeur_saisie_vide, f1_reference_existe, f2_verifier_valeur_entiere_positive, f3_afficher_liste_references
 
-def m2_ajouter_stock(inventaire, registre):
+def m2_ajouter_stock(inventaire, registre, utilisateur):
     while True:
         # pour arrêter le programme que lorsque l'utilisateur le décide
         while True:
@@ -29,7 +29,7 @@ def m2_ajouter_stock(inventaire, registre):
             if n == "o":
                 inventaire[reference] += quantite_a_entrer
                 # enregistrement de l'opération dans le registre
-                registre.append(f"Ajout : {quantite_a_entrer} unité(s) de {reference}")
+                registre.append(f"{utilisateur} - Ajout : {quantite_a_entrer} unité(s) de {reference}")
                 print(
                     f"\nVous venez d'ajouter {quantite_a_entrer} unité(s) de {reference}.\nIl y a maintenant {inventaire[reference]} unité(s) en stock.\n")
                 # proposer à l'utilisateur de réaliser une nouvelle opération ou de revenir au menu

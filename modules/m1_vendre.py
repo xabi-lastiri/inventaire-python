@@ -1,6 +1,6 @@
 from library.fonctions import f0_valeur_saisie_vide, f1_reference_existe, f2_verifier_valeur_entiere_positive, f3_afficher_liste_references
 
-def m1_vendre(inventaire, registre):
+def m1_vendre(inventaire, registre, utilisateur):
     while True:
         # pour arrêter le programme que lorsque l'utilisateur le décide
         while True:
@@ -30,7 +30,7 @@ def m1_vendre(inventaire, registre):
             if n == "o":
                 inventaire[reference] -= quantite_a_vendre
                 # enregistrement de l'opération dans le registre
-                registre.append(f"Vente : {quantite_a_vendre} unité(s) de {reference}")
+                registre.append(f"{utilisateur} - Vente : {quantite_a_vendre} unité(s) de {reference}")
                 print(
                     f"\nVous venez de vendre {quantite_a_vendre} unité(s) de {reference}. Il reste maintenant {inventaire[reference]} unité(s) en stock")
                 # proposer à l'utilisateur de réaliser une nouvelle opération ou de revenir au menu
