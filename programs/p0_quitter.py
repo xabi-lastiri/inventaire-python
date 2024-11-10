@@ -1,4 +1,4 @@
-import sys
+from library import sys
 
 
 def p0_quitter():
