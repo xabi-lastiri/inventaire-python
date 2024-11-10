@@ -1,4 +1,4 @@
-def p5_afficher_stock(inv):
+def m5_afficher_stock(inv):
     while True:
         # pour arrêter le programme que lorsque l'utilisateur le décide
         print("\n")

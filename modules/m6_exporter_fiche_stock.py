@@ -1,7 +1,7 @@
 from library import csv
 
 
-def p6_exporter_fiche_stock(inv):
+def m6_exporter_fiche_stock(inv):
     with open('fiche_stock.csv','w') as f:
         writer = csv.writer(f)
         writer.writerow(["Référence", "Stock"])

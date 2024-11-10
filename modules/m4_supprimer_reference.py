@@ -1,7 +1,7 @@
 from library.fonctions import f0_valeur_saisie_vide, f1_reference_existe, f3_afficher_liste_references
 
 
-def p4_supprimer_reference(inv):
+def m4_supprimer_reference(inv):
     while True:
         # pour arrêter le programme que lorsque l'utilisateur le décide
         while True:
