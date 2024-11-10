@@ -3,7 +3,10 @@ from library.fonctions import f0_valeur_saisie_vide, f1_reference_existe, f2_ver
 
 def p3_ajouter_reference(inv):
     while True:
+        # pour arrêter le programme que lorsque l'utilisateur le décide
         while True:
+            # demander à l'utilisateur de saisir la référence à ajouter dans l'inventaire
+            # vérifier que la référence à ajouter n'existe PAS dans l'inventaire
             reference = input("Saisissez la référence à ajouter dans l'inventaire.\nPour annuler, laissez vide.\n\n")
             if f0_valeur_saisie_vide(reference):
                 return
@@ -12,6 +15,7 @@ def p3_ajouter_reference(inv):
             else:
                 print("\nLa référence existe déjà")
         while True:
+            # demander à l'utilisateur de confirmer la saisie
             n = input(f"\nAjouter {reference}.\nConfirmez-vous ? (o/n) \n\n").lower()
             if n == "o":
                 break
@@ -20,6 +24,8 @@ def p3_ajouter_reference(inv):
             else:
                 print("\nValeur incorrecte. Veuillez saisir à nouveau votre réponse.")
         while True:
+            # demander à l'utilisateur de saisir le stock initial pour la référence à entrer dans l'inventaire
+            # vérifier que la quantité saisie est cohérente
             try:
                 stock_initial = input(f"\nSaisissez le stock initial : \n\n")
                 stock_initial = int(stock_initial)
@@ -29,6 +35,7 @@ def p3_ajouter_reference(inv):
             except ValueError:
                 print("\nValeur incorrecte.")
         while True:
+            # demander à l'utilisateur de confirmer l'opération ; si oui, ajouter la référence et son stock initial dans l'inventaire
             n = input(f"\nStock initial {stock_initial} pour {reference}. Confirmez-vous ? (o/n) \n\n").lower()
             if n == "o":
                 break
@@ -38,6 +45,7 @@ def p3_ajouter_reference(inv):
                 print("\nVeuillez saisir à nouveau votre réponse.")
         inv[reference] = stock_initial
         print(f"\nVous venez d'ajouter {reference} avec {stock_initial} unité(s) en stock initial.\n")
+        # proposer à l'utilisateur de réaliser une nouvelle opération ou de revenir au menu
         continuer = input("\nVoulez-vous ajouter une autre référence ? (o/n)\n\n").lower()
         if continuer == "n":
             break
