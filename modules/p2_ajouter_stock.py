@@ -28,19 +28,18 @@ def p2_ajouter_stock(inv):
             # demander à l'utilisateur de confirmer l'opération ; si oui, ajouter dans l'inventaire la quantité pour la référence donnée
             n = input(f"\nAjout de {quantite_a_entrer} unité(s) pour {reference}.\nConfirmez-vous ? (o/n) \n\n").lower()
             if n == "o":
-                break
+                inv[reference] += quantite_a_entrer
+                print(
+                    f"\nVous venez d'ajouter {quantite_a_entrer} unité(s) de {reference}.\nIl y a maintenant {inv[reference]} unité(s) en stock.\n")
+                # proposer à l'utilisateur de réaliser une nouvelle opération ou de revenir au menu
+                continuer = input("\nVoulez-vous ajouter autre chose ? (o/n)\n\n").lower()
+                if continuer == "n":
+                    return
+                if continuer == "o":
+                    break
+                else:
+                    return
             if n == "n":
-                return
+                break
             else:
                 print("\nVeuillez saisir à nouveau votre réponse.")
-        inv[reference] += quantite_a_entrer
-        print(
-            f"\nVous venez d'ajouter {quantite_a_entrer} unité(s) de {reference}.\nIl y a maintenant {inv[reference]} unité(s) en stock.\n")
-        # proposer à l'utilisateur de réaliser une nouvelle opération ou de revenir au menu
-        continuer = input("\nVoulez-vous ajouter autre chose ? (o/n)\n\n").lower()
-        if continuer == "n":
-            break
-        if continuer == "o":
-            continue
-        else:
-            break

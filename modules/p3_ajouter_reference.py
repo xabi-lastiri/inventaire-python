@@ -15,15 +15,6 @@ def p3_ajouter_reference(inv):
             else:
                 print("\nLa référence existe déjà")
         while True:
-            # demander à l'utilisateur de confirmer la saisie
-            n = input(f"\nAjouter {reference}.\nConfirmez-vous ? (o/n) \n\n").lower()
-            if n == "o":
-                break
-            if n == "n":
-                return
-            else:
-                print("\nValeur incorrecte. Veuillez saisir à nouveau votre réponse.")
-        while True:
             # demander à l'utilisateur de saisir le stock initial pour la référence à entrer dans l'inventaire
             # vérifier que la quantité saisie est cohérente
             try:
@@ -36,20 +27,19 @@ def p3_ajouter_reference(inv):
                 print("\nValeur incorrecte.")
         while True:
             # demander à l'utilisateur de confirmer l'opération ; si oui, ajouter la référence et son stock initial dans l'inventaire
-            n = input(f"\nStock initial {stock_initial} pour {reference}. Confirmez-vous ? (o/n) \n\n").lower()
+            n = input(f"\nAjouter {reference} avec {stock_initial} unité(s) en stock initial.\nConfirmez-vous ? (o/n) \n\n").lower()
             if n == "o":
-                break
+                inv[reference] = stock_initial
+                print(f"\nVous venez d'ajouter {reference} avec {stock_initial} unité(s) en stock initial.\n")
+                # proposer à l'utilisateur de réaliser une nouvelle opération ou de revenir au menu
+                continuer = input("\nVoulez-vous ajouter une autre référence ? (o/n)\n\n").lower()
+                if continuer == "n":
+                    return
+                if continuer == "o":
+                    break
+                else:
+                    return
             if n == "n":
-                return
+                break
             else:
                 print("\nVeuillez saisir à nouveau votre réponse.")
-        inv[reference] = stock_initial
-        print(f"\nVous venez d'ajouter {reference} avec {stock_initial} unité(s) en stock initial.\n")
-        # proposer à l'utilisateur de réaliser une nouvelle opération ou de revenir au menu
-        continuer = input("\nVoulez-vous ajouter une autre référence ? (o/n)\n\n").lower()
-        if continuer == "n":
-            break
-        if continuer == "o":
-            continue
-        else:
-            break
