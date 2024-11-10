@@ -2,7 +2,7 @@
 
 Premier projet de programmation dans le cadre de mon apprentissage du langage Python.
 
-![Illustration.png](documentation/Illustration.png)
+![Illustration.png](documentation/menu_accueil.png)
 
 ## Fonctionnalités
 Ce petit programme permet de gérer un inventaire de produits. Il est possible de :
@@ -21,5 +21,5 @@ stockées dans le fichier [fonctions.py](library/fonctions.py) situé dans le r�
 
 ## Logique
 
-Consulter le diagramme : [Algorithme.drawio](documentation/Algorithme.drawio).
+Consulter le diagramme : [Algorithme.drawio](documentation/schéma_algorithme.drawio).
 
