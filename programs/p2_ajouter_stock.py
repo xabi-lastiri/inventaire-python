@@ -20,7 +20,7 @@ def p2_ajouter_stock(inv):
             except ValueError:
                 print("\nValeur incorrecte.")
         while True:
-            n = input(f"\nAjout de {quantite_a_entrer} unité(s) pour {reference}.\nConfirmez-vous ? (o/n) \n\n")
+            n = input(f"\nAjout de {quantite_a_entrer} unité(s) pour {reference}.\nConfirmez-vous ? (o/n) \n\n").lower()
             if n == "o":
                 break
             if n == "n":
@@ -30,7 +30,7 @@ def p2_ajouter_stock(inv):
         inv[reference] += quantite_a_entrer
         print(
             f"\nVous venez d'ajouter {quantite_a_entrer} unité(s) de {reference}.\nIl y a maintenant {inv[reference]} unité(s) en stock.\n")
-        continuer = input("\nVoulez-vous ajouter autre chose ? (o/n)\n\n")
+        continuer = input("\nVoulez-vous ajouter autre chose ? (o/n)\n\n").lower()
         if continuer == "n":
             break
         if continuer == "o":

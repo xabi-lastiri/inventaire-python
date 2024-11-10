@@ -12,7 +12,7 @@ def p3_ajouter_reference(inv):
             else:
                 print("\nLa référence existe déjà")
         while True:
-            n = input(f"\nAjouter {reference}.\nConfirmez-vous ? (o/n) \n\n")
+            n = input(f"\nAjouter {reference}.\nConfirmez-vous ? (o/n) \n\n").lower()
             if n == "o":
                 break
             if n == "n":
@@ -29,7 +29,7 @@ def p3_ajouter_reference(inv):
             except ValueError:
                 print("\nValeur incorrecte.")
         while True:
-            n = input(f"\nStock initial {stock_initial} pour {reference}. Confirmez-vous ? (o/n) \n\n")
+            n = input(f"\nStock initial {stock_initial} pour {reference}. Confirmez-vous ? (o/n) \n\n").lower()
             if n == "o":
                 break
             if n == "n":
@@ -38,7 +38,7 @@ def p3_ajouter_reference(inv):
                 print("\nVeuillez saisir à nouveau votre réponse.")
         inv[reference] = stock_initial
         print(f"\nVous venez d'ajouter {reference} avec {stock_initial} unité(s) en stock initial.\n")
-        continuer = input("\nVoulez-vous ajouter une autre référence ? (o/n)\n\n")
+        continuer = input("\nVoulez-vous ajouter une autre référence ? (o/n)\n\n").lower()
         if continuer == "n":
             break
         if continuer == "o":

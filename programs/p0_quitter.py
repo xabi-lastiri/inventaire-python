@@ -1,11 +1,8 @@
-from library import sys
-
-
 def p0_quitter():
     while True:
-        n = input(f"\nConfirmez-vous vouloir quitter ? (o/n) \n\n")
+        n = input(f"\nConfirmez-vous vouloir quitter ? (o/n) \n\n").lower()
         if n == "o":
-            sys.exit()
+            exit()
         if n == "n":
             break
         else:

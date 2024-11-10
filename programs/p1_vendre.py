@@ -21,7 +21,7 @@ def p1_vendre(inv):
             except ValueError:
                 print("\nValeur incorrecte.")
         while True:
-            n = input(f"\nVente de {quantite_a_vendre} unité(s) de {reference}.\nConfirmez-vous l'opération ? (o/n)\n\n")
+            n = input(f"\nVente de {quantite_a_vendre} unité(s) de {reference}.\nConfirmez-vous l'opération ? (o/n)\n\n").lower()
             if n == "o":
                 break
             if n == "n":
@@ -30,7 +30,7 @@ def p1_vendre(inv):
                 print("\nVeuillez saisir à nouveau votre réponse.")
         inv[reference] -= quantite_a_vendre
         print(f"\nVous venez de vendre {quantite_a_vendre} unité(s) de {reference}. Il reste maintenant {inv[reference]} unité(s) en stock")
-        continuer = input("\nVoulez-vous vendre autre chose ? (o/n)\n\n")
+        continuer = input("\nVoulez-vous vendre autre chose ? (o/n)\n\n").lower()
         if continuer == "n":
             break
         if continuer == "o":

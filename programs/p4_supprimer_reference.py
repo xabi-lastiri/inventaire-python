@@ -12,7 +12,7 @@ def p4_supprimer_reference(inv):
             else:
                 print("\nLa référence n'existe pas.")
         while True:
-            n = input(f"\nSupprimer {reference}.\nConfirmez-vous ? (o/n) \n\n")
+            n = input(f"\nSupprimer {reference}.\nConfirmez-vous ? (o/n) \n\n").lower()
             if n == "o":
                 break
             if n == "n":
@@ -21,7 +21,7 @@ def p4_supprimer_reference(inv):
                 print("\nVeuillez saisir à nouveau votre réponse.")
         del inv[reference]
         print(f"\nNous vous confirmons la suppression de la référence {reference}")
-        continuer = input("\nVoulez-vous supprimer une autre référence ? (o/n)\n\n")
+        continuer = input("\nVoulez-vous supprimer une autre référence ? (o/n)\n\n").lower()
         if continuer == "n":
             break
         if continuer == "o":
