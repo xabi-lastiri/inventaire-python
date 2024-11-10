@@ -25,10 +25,12 @@ def m3_ajouter_reference(inventaire, registre, utilisateur):
         while True:
             # demander à l'utilisateur de confirmer l'opération ; si oui, ajouter la référence et son stock initial dans l'inventaire
             n = input(f"\nAjouter {reference} avec {stock_initial} unité(s) en stock initial.\nConfirmez-vous ? (o/n) \n\n").lower()
+            if n == "n":
+                break
             if n == "o":
                 inventaire[reference] = stock_initial
                 # enregistrement de l'opération dans le registre
-                registre.append(f"{utilisateur} - Création : {reference} avec {stock_initial} unité(s) en stock initial")
+                registre.append(f"{utilisateur} : CRÉATION de {reference} avec {stock_initial} unité(s) en stock initial")
                 print(f"\nVous venez d'ajouter {reference} avec {stock_initial} unité(s) en stock initial.\n")
                 # proposer à l'utilisateur de réaliser une nouvelle opération ou de revenir au menu
                 continuer = input("\nVoulez-vous ajouter une autre référence ? (o/n)\n\n").lower()
@@ -38,7 +40,5 @@ def m3_ajouter_reference(inventaire, registre, utilisateur):
                     break
                 else:
                     return
-            if n == "n":
-                break
             else:
                 print("\nVeuillez saisir à nouveau votre réponse.")

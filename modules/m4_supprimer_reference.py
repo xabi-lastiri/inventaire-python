@@ -16,10 +16,12 @@ def m4_supprimer_reference(inventaire, registre, utilisateur):
         while True:
             # demander à l'utilisateur de confirmer l'opération ; si oui, supprimer de l'inventaire la référence et son stock associé
             n = input(f"\nSupprimer {reference}.\nConfirmez-vous ? (o/n) \n\n").lower()
+            if n == "n":
+                break
             if n == "o":
                 del inventaire[reference]
                 # enregistrement de l'opération dans le registre
-                registre.append(f"{utilisateur} - Suppression : {reference}")
+                registre.append(f"{utilisateur} : SUPPRESSION de {reference}")
                 print(f"\nNous vous confirmons la suppression de la référence {reference}")
                 # proposer à l'utilisateur de réaliser une nouvelle opération ou de revenir au menu
                 continuer = input("\nVoulez-vous supprimer une autre référence ? (o/n)\n\n").lower()
@@ -29,7 +31,5 @@ def m4_supprimer_reference(inventaire, registre, utilisateur):
                     break
                 else:
                     return
-            if n == "n":
-                break
             else:
                 print("\nVeuillez saisir à nouveau votre réponse.")

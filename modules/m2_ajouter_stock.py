@@ -9,7 +9,7 @@ def m2_ajouter_stock(inventaire, registre, utilisateur):
             reference = input(f"\nSaisissez la référence à stocker : ({f3_afficher_liste_references(inventaire)}) \nPour annuler, laissez vide.\n\n")
             if f0_valeur_saisie_vide(reference):
                 return
-            if f1_reference_existe(reference, inventaire): #à debuger
+            if f1_reference_existe(reference, inventaire):
                 break
             else:
                 print("\nLa référence n'existe pas.")
@@ -25,10 +25,12 @@ def m2_ajouter_stock(inventaire, registre, utilisateur):
         while True:
             # demander à l'utilisateur de confirmer l'opération ; si oui, ajouter dans l'inventaire la quantité pour la référence donnée
             n = input(f"\nAjout de {quantite_a_entrer} unité(s) pour {reference}.\nConfirmez-vous ? (o/n) \n\n").lower()
+            if n == "n":
+                break
             if n == "o":
                 inventaire[reference] += quantite_a_entrer
                 # enregistrement de l'opération dans le registre
-                registre.append(f"{utilisateur} - Ajout : {quantite_a_entrer} unité(s) de {reference}")
+                registre.append(f"{utilisateur} : AJOUT de {quantite_a_entrer} unité(s) de {reference}")
                 print(f"\nVous venez d'ajouter {quantite_a_entrer} unité(s) de {reference}.\nIl y a maintenant {inventaire[reference]} unité(s) en stock.\n")
                 # proposer à l'utilisateur de réaliser une nouvelle opération ou de revenir au menu
                 continuer = input("\nVoulez-vous ajouter autre chose ? (o/n)\n\n").lower()
@@ -38,7 +40,5 @@ def m2_ajouter_stock(inventaire, registre, utilisateur):
                     break
                 else:
                     return
-            if n == "n":
-                break
             else:
                 print("\nVeuillez saisir à nouveau votre réponse.")
