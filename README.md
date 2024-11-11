@@ -22,4 +22,5 @@ Les modules sont accessibles depuis le menu principal (contenu dans le fichier [
 Chaque module est stocké dans [`/modules`](modules) et fait appel à des fonctions
 stockées dans le fichier [fonctions.py](library/fonctions.py) situé dans le répertoire [`/library`](library). 
 Les données de l'inventaire sont contenues dans [inventaire.py](data/inventaire.py) 
-situé dans le répertoire [`/data`](data).
+situé dans le répertoire [`/data`](data) et les données du registre dans [registre.py](data/registre.py) 
+situé aussi dans ce même répertoire.
