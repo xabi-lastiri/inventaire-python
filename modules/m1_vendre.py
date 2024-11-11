@@ -9,12 +9,13 @@ def m1_vendre(inventaire, registre, utilisateur):
             reference = input(f"\nSaisissez la référence à vendre ({f3_afficher_liste_references(inventaire)})\nPour annuler, laissez vide.\n\n")
             if f0_valeur_saisie_vide(reference):
                 return
-            if not f1_reference_existe(reference, inventaire):
-                print(f"\n{reference} n'existe pas dans l'inventaire.")
-            if inventaire[reference] == 0:
-                print("Le stock est nul.")
+            if f1_reference_existe(reference, inventaire):
+                if inventaire[reference] == 0:
+                    print(f"Il n'y a plus de {reference} en stock.")
+                else:
+                    break
             else:
-                break
+                print(f"\n{reference} n'existe pas dans l'inventaire.")
         while True:
             # demander à l'utilisateur de saisir la quantité à vendre
             # vérifier que la quantité à vendre soit (1) cohérente et (2) possible compte tenu du stock diponible dans l'inventaire au moment de l'opération
