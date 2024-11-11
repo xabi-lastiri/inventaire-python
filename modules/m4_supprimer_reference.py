@@ -1,14 +1,14 @@
 from library import *
 
 def m4_supprimer_reference(inventaire, registre, utilisateur):
-    while True:
-        # pour arrêter le programme que lorsque l'utilisateur le décide
+    while True: # pour arrêter le programme que lorsque l'utilisateur le décide
         while True:
             # demander à l'utilisateur de saisir la référence à supprimer
-            # vérifier que la référence à supprimer existe dans l'inventaire
             reference = input(f"Saisissez la référence à supprimer de l'inventaire : ({f3_afficher_liste_references(inventaire)})\nPour annuler, laissez vide.\n\n")
+            # vérifier si l'utilisateur souhaite annuler l'opération
             if f0_valeur_saisie_vide(reference):
                 return
+            # vérifier que la référence à supprimer existe dans l'inventaire
             if f1_reference_existe(reference,inventaire):
                 break
             else:
@@ -20,7 +20,7 @@ def m4_supprimer_reference(inventaire, registre, utilisateur):
                 break
             if n == "o":
                 del inventaire[reference]
-                # enregistrement de l'opération dans le registre
+                # enregistrer l'opération dans le registre
                 registre.append(f"{utilisateur} : SUPPRESSION de {reference}")
                 print(f"\nNous vous confirmons la suppression de la référence {reference}")
                 # proposer à l'utilisateur de réaliser une nouvelle opération ou de revenir au menu
