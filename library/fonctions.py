@@ -9,10 +9,14 @@ def f1_reference_existe(n, x): # ici, n correspond au champ saisi et x à l'inve
         return False
 
 def f2_verifier_valeur_entiere_positive(n):
-    if type(n) == int and n > 0:
-        return True
-    else:
+    try:
+        n = int(n)
+    except ValueError:
         return False
+    if n < 0:
+        return False
+    else:
+        return True
 
 def f3_afficher_liste_references(n):
     return ', '.join(n.keys())

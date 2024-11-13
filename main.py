@@ -1,10 +1,15 @@
 from modules import *
 from data import *
 
+modules = ["Quitter", "Vendre", "Ajouter du stock", "Ajouter une référence", "Supprimer une référence", "Afficher le stock", "Afficher le registre des opérations", "Exporter la fiche de stock", "Exporter le registre des opérations"]
+
 # demander à l'utilisateur de s'autentifier pour permettre le traçage des opérations
 utilisateur = input("Saisissez votre nom : ")
+print("")
 while True:
-    menu = input(f"\nSélectionner le programme :\n\n 0. Quitter \n 1. Vendre \n 2. Ajouter du stock \n 3. Ajouter une référence \n 4. Supprimer une référence \n 5. Afficher le stock \n 6. Afficher le registre des opérations \n 7. Exporter la fiche de stock \n 8. Exporter le registre des opérations  \n\n")
+    for module in modules:
+        print(f"{modules.index(module)}. {module}")
+    menu = input(f"\nSélectionner le programme : ")
     if menu == "0":
         m0_quitter()
     if menu == "1":
