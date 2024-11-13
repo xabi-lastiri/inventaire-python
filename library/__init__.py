@@ -2,4 +2,5 @@ from library.fonctions import verifier_valeur_saisie_vide
 from library.fonctions import verifier_reference_existe
 from library.fonctions import verifier_valeur_entiere_positive
 from library.fonctions import afficher_liste_references
+from library.fonctions import confirmer
 from library import csv
