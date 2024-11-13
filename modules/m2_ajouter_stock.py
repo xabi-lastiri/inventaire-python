@@ -27,7 +27,7 @@ def m2_ajouter_stock(inventaire, registre, utilisateur):
         while True:
             n = input(f"\nAjout de {quantite_a_entrer} unité(s) pour {reference}.\nConfirmez-vous ? (o/n) \n\n").lower()
             if n == "n":
-                return
+                break
             elif n == "o":
                 quantite_a_entrer = int(quantite_a_entrer)
                 inventaire[reference] += quantite_a_entrer

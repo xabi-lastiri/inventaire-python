@@ -1,6 +1,8 @@
 from library import *
 
+
 def m8_exporter_registre(registre):
+
     with open('registre_operations.csv','w') as f:
         writer = csv.writer(f)
         writer.writerow(["Numéro", "Opération"])

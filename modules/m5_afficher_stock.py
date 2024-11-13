@@ -1,5 +1,6 @@
 def m5_afficher_stock(inventaire):
-    while True: # pour arrêter le programme que lorsque l'utilisateur le décide
+
+    while True:
         print("\n")
         for reference, quantite in inventaire.items():
             print(f"{reference} : {quantite} unité(s) en stock.")
