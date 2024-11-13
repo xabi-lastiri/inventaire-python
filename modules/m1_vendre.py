@@ -17,7 +17,7 @@ def m1_vendre(inventaire, registre, utilisateur):
             else:
                 break
 
-        # Étape 2 : Choisir la quantité à retirer
+        # Étape 2 : Choisir la quantité à retirer de l'inventaire pour la référence donnée
         while True:
             quantite_a_vendre = input(f"\nIl reste {inventaire[reference]} unité(s) en stock pour le produit {reference}.\nSaisissez la quantité à vendre : \n\n")
             if not f2_verifier_valeur_entiere_positive(quantite_a_vendre):
