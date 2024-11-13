@@ -1,4 +1,4 @@
-def m5_afficher_stock(inventaire):
+def afficher_stock(inventaire):
 
     while True:
         print("\n")

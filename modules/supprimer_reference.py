@@ -1,16 +1,16 @@
 from library import *
 
 
-def m4_supprimer_reference(inventaire, registre, utilisateur):
+def supprimer_reference(inventaire, registre, utilisateur):
 
     while True:
 
         # Étape 1 : Entrer le nom de la référence
         while True:
-            reference = input(f"Saisissez la référence à supprimer de l'inventaire : ({f3_afficher_liste_references(inventaire)})\nPour annuler, laissez vide.\n\n")
-            if f0_valeur_saisie_vide(reference):
+            reference = input(f"Saisissez la référence à supprimer de l'inventaire : ({afficher_liste_references(inventaire)})\nPour annuler, laissez vide.\n\n")
+            if valeur_saisie_vide(reference):
                 return
-            if not f1_reference_existe(reference,inventaire):
+            if not reference_existe(reference,inventaire):
                 print("\nLa référence n'existe pas.")
             else:
                 break

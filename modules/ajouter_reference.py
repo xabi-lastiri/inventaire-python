@@ -1,16 +1,16 @@
 from library import *
 
 
-def m3_ajouter_reference(inventaire, registre, utilisateur):
+def ajouter_reference(inventaire, registre, utilisateur):
 
     while True:
 
         # Étape 1 : Entrer le nom de la référence
         while True:
             reference = input("Saisissez la référence à ajouter dans l'inventaire.\nPour annuler, laissez vide.\n\n")
-            if f0_valeur_saisie_vide(reference):
+            if valeur_saisie_vide(reference):
                 return
-            elif f1_reference_existe(reference,inventaire):
+            elif reference_existe(reference,inventaire):
                 print("\nLa référence existe déjà")
             else:
                 break
@@ -18,7 +18,7 @@ def m3_ajouter_reference(inventaire, registre, utilisateur):
         # Étape 2 : Choisir le stock initial pour la référence à entrer
         while True:
             stock_initial = input(f"\nSaisissez le stock initial : \n\n")
-            if not f2_verifier_valeur_entiere_positive(stock_initial):
+            if not verifier_valeur_entiere_positive(stock_initial):
                 print("\nValeur incorrecte.")
             else:
                 break

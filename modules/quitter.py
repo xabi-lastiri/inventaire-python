@@ -1,4 +1,4 @@
-def m0_quitter():
+def quitter():
     while True:
         confirmer = input(f"\nConfirmez-vous vouloir quitter ? (o/n) \n\n").lower()
         if confirmer == "o":

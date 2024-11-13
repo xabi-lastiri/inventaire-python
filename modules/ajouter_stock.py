@@ -1,16 +1,16 @@
 from library import *
 
 
-def m2_ajouter_stock(inventaire, registre, utilisateur):
+def ajouter_stock(inventaire, registre, utilisateur):
 
     while True:
 
         # Étape 1 : Sélectionner la référence
         while True:
-            reference = input(f"\nSaisissez la référence à stocker : ({f3_afficher_liste_references(inventaire)}) \nPour annuler, laissez vide.\n\n")
-            if f0_valeur_saisie_vide(reference):
+            reference = input(f"\nSaisissez la référence à stocker : ({afficher_liste_references(inventaire)}) \nPour annuler, laissez vide.\n\n")
+            if valeur_saisie_vide(reference):
                 return
-            elif not f1_reference_existe(reference, inventaire):
+            elif not reference_existe(reference, inventaire):
                 print("\nLa référence n'existe pas.")
             else:
                 break
@@ -18,7 +18,7 @@ def m2_ajouter_stock(inventaire, registre, utilisateur):
         # Étape 2 : Choisir la quantité à ajouter dans l'inventaire pour la référence donnée
         while True:
             quantite_a_entrer = input(f"\nSaisissez la quantité à entrer : \n\n")
-            if not f2_verifier_valeur_entiere_positive(quantite_a_entrer):
+            if not verifier_valeur_entiere_positive(quantite_a_entrer):
                 print("\nValeur incorrecte.")
             else:
                 break

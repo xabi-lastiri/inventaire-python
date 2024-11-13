@@ -1,4 +1,4 @@
-def m6_afficher_registre(registre):
+def afficher_registre(registre):
 
     while True:
         print("\n")

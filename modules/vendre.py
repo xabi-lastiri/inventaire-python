@@ -1,16 +1,16 @@
 from library import *
 
 
-def m1_vendre(inventaire, registre, utilisateur):
+def vendre(inventaire, registre, utilisateur):
 
     while True:
 
         # Étape 1 : Sélectionner la référence
         while True:
-            reference = input(f"\nSaisissez la référence à vendre ({f3_afficher_liste_references(inventaire)}) \nPour annuler, laissez vide.\n\n")
-            if f0_valeur_saisie_vide(reference):
+            reference = input(f"\nSaisissez la référence à vendre ({afficher_liste_references(inventaire)}) \nPour annuler, laissez vide.\n\n")
+            if valeur_saisie_vide(reference):
                 return
-            if not f1_reference_existe(reference, inventaire):
+            if not reference_existe(reference, inventaire):
                 print(f"\n{reference} n'existe pas dans l'inventaire.")
             elif inventaire[reference] == 0:
                 print(f"Il n'y a plus de {reference}(s) en stock.")
@@ -20,7 +20,7 @@ def m1_vendre(inventaire, registre, utilisateur):
         # Étape 2 : Choisir la quantité à retirer de l'inventaire pour la référence donnée
         while True:
             quantite_a_vendre = input(f"\nIl reste {inventaire[reference]} unité(s) en stock pour le produit {reference}.\nSaisissez la quantité à vendre : \n\n")
-            if not f2_verifier_valeur_entiere_positive(quantite_a_vendre):
+            if not verifier_valeur_entiere_positive(quantite_a_vendre):
                 print("\nValeur incorrecte.")
             elif int(quantite_a_vendre) > inventaire[reference]:
                 print("\nLe stock est insuffisant.")

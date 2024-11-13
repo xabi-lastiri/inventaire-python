@@ -1,14 +1,14 @@
-def f0_valeur_saisie_vide(n):
+def valeur_saisie_vide(n):
     if str(n) == "":
         return True
 
-def f1_reference_existe(n, x): # ici, n correspond au champ saisi et x à l'inventaire
+def reference_existe(n, x): # ici, n correspond au champ saisi et x à l'inventaire
     if n in x:
         return True
     else:
         return False
 
-def f2_verifier_valeur_entiere_positive(n):
+def verifier_valeur_entiere_positive(n):
     try:
         n = int(n)
     except ValueError:
@@ -18,5 +18,5 @@ def f2_verifier_valeur_entiere_positive(n):
     else:
         return True
 
-def f3_afficher_liste_references(n):
+def afficher_liste_references(n):
     return ', '.join(n.keys())
