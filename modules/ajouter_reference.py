@@ -8,9 +8,9 @@ def ajouter_reference(inventaire, registre, utilisateur):
         # Étape 1 : Entrer le nom de la référence
         while True:
             reference = input("Saisissez la référence à ajouter dans l'inventaire.\nPour annuler, laissez vide.\n\n")
-            if valeur_saisie_vide(reference):
+            if verifier_valeur_saisie_vide(reference):
                 return
-            elif reference_existe(reference,inventaire):
+            elif verifier_reference_existe(reference,inventaire):
                 print("\nLa référence existe déjà")
             else:
                 break

@@ -1,8 +1,8 @@
-def valeur_saisie_vide(n):
+def verifier_valeur_saisie_vide(n):
     if str(n) == "":
         return True
 
-def reference_existe(n, x): # ici, n correspond au champ saisi et x à l'inventaire
+def verifier_reference_existe(n, x): # ici, n correspond au champ saisi et x à l'inventaire
     if n in x:
         return True
     else:

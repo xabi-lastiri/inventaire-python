@@ -8,9 +8,9 @@ def vendre(inventaire, registre, utilisateur):
         # Étape 1 : Sélectionner la référence
         while True:
             reference = input(f"\nSaisissez la référence à vendre ({afficher_liste_references(inventaire)}) \nPour annuler, laissez vide.\n\n")
-            if valeur_saisie_vide(reference):
+            if verifier_valeur_saisie_vide(reference):
                 return
-            if not reference_existe(reference, inventaire):
+            if not verifier_reference_existe(reference, inventaire):
                 print(f"\n{reference} n'existe pas dans l'inventaire.")
             elif inventaire[reference] == 0:
                 print(f"Il n'y a plus de {reference}(s) en stock.")

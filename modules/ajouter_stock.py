@@ -8,9 +8,9 @@ def ajouter_stock(inventaire, registre, utilisateur):
         # Étape 1 : Sélectionner la référence
         while True:
             reference = input(f"\nSaisissez la référence à stocker : ({afficher_liste_references(inventaire)}) \nPour annuler, laissez vide.\n\n")
-            if valeur_saisie_vide(reference):
+            if verifier_valeur_saisie_vide(reference):
                 return
-            elif not reference_existe(reference, inventaire):
+            elif not verifier_reference_existe(reference, inventaire):
                 print("\nLa référence n'existe pas.")
             else:
                 break
