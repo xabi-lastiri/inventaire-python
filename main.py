@@ -13,10 +13,14 @@ modules = ["Quitter",
 
 utilisateur = input("Saisissez votre nom : ")
 print("")
+
 while True:
+
     for module in modules:
         print(f"{modules.index(module)}. {module}")
+
     menu = input(f"\nSélectionner le programme : ")
+
     if menu == "0":
         quitter()
     if menu == "1":

@@ -10,7 +10,7 @@ def ajouter_reference(inventaire, registre, utilisateur):
             reference = input("Saisissez la référence à ajouter dans l'inventaire.\nPour annuler, laissez vide.\n\n")
             if verifier_valeur_saisie_vide(reference):
                 return
-            elif verifier_reference_existe(reference,inventaire):
+            elif reference in inventaire:
                 print("\nLa référence existe déjà")
             else:
                 break
@@ -24,14 +24,15 @@ def ajouter_reference(inventaire, registre, utilisateur):
         # Étape 3 : Confirmer l'opération
         while True:
             print(f"\nAjouter {reference} avec {stock_initial} unité(s) en stock initial.\nConfirmez-vous ? (o/n) \n")
-            if confirmer():
+            if not confirmer():
+                break
+            else:
                 inventaire[reference] = int(stock_initial)
                 registre.append(f"{utilisateur} : CRÉATION de {reference} avec {stock_initial} unité(s) en stock initial")
                 print(f"\nVous venez d'ajouter {reference} avec {stock_initial} unité(s) en stock initial.\n")
                 break
-            else:
-                break
 
         # Étape 4 : Réaliser une nouvelle opération ou revenir au menu
+        print("Voulez-vous réaliser une nouvelle opération ? (o/n) :\n")
         if not confirmer():
             break

@@ -7,7 +7,9 @@ def ajouter_stock(inventaire, registre, utilisateur):
 
         # Étape 1 : Sélectionner la référence
         while True:
-            reference = input(f"\nSaisissez la référence à stocker : ({afficher_liste_references(inventaire)}) \nPour annuler, laissez vide.\n")
+            reference = input(f"\nSaisissez la référence à stocker : "
+                              f"({afficher_liste_references(inventaire)}) "
+                              f"\nPour annuler, laissez vide.\n")
             if verifier_valeur_saisie_vide(reference):
                 return
             if verifier_reference_existe(reference, inventaire):
@@ -15,22 +17,24 @@ def ajouter_stock(inventaire, registre, utilisateur):
 
         # Étape 2 : Choisir la quantité à ajouter dans l'inventaire pour la référence donnée
         while True:
-            quantite_a_entrer = input(f"\nSaisissez la quantité à entrer : \n\n")
+            quantite_a_entrer = input(f"\nSaisissez la quantité à entrer :\n\n")
             if verifier_valeur_entiere_positive(quantite_a_entrer):
                 break
 
         # Étape 3 : Confirmer l'opération
         while True:
             print(f"\nAjout de {quantite_a_entrer} unité(s) pour {reference}.\nConfirmez-vous ? (o/n) \n\n")
-            if confirmer():
+            if not confirmer():
+                break
+            else:
                 quantite_a_entrer = int(quantite_a_entrer)
                 inventaire[reference] += quantite_a_entrer
                 registre.append(f"{utilisateur} : AJOUT de {quantite_a_entrer} unité(s) de {reference}")
-                print(f"\nVous venez d'ajouter {quantite_a_entrer} unité(s) de {reference}.\nIl y a maintenant {inventaire[reference]} unité(s) en stock.\n")
-                break
-            else:
+                print(f"\nVous venez d'ajouter {quantite_a_entrer} unité(s) de {reference}."
+                      f"\nIl y a maintenant {inventaire[reference]} unité(s) en stock.\n")
                 break
 
         # Étape 4 : Réaliser une nouvelle opération ou revenir au menu
+        print("Voulez-vous réaliser une nouvelle opération ? (o/n) :\n")
         if not confirmer():
             break

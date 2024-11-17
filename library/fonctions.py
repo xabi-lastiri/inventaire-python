@@ -2,12 +2,14 @@ def verifier_valeur_saisie_vide(n):
     if str(n) == "":
         return True
 
-def verifier_reference_existe(n, x):
-    if n in x:
+
+def verifier_reference_existe(reference, inventaire):
+    if reference in inventaire:
         return True
     else:
         print("La référence n'existe pas.")
         return False
+
 
 def verifier_valeur_entiere_positive(n):
     try:
@@ -21,16 +23,19 @@ def verifier_valeur_entiere_positive(n):
     else:
         return True
 
-def verifier_stock_suffisant(n, x, y):
-    y = int(y)
-    if y <= n[x]:
+
+def verifier_stock_suffisant(inventaire, reference, quantite):
+    quantite = int(quantite)
+    if quantite <= inventaire[reference]:
         return True
     else:
         print("Le stock est insuffisant")
         return False
 
-def afficher_liste_references(n):
-    return ', '.join(n.keys())
+
+def afficher_liste_references(inventaire):
+    return ', '.join(inventaire.keys())
+
 
 def confirmer():
     while True:
